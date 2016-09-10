@@ -13,7 +13,11 @@ node('gradle-agent') {
   stage ('Build') {
   echo "Building projec using Gradle"
   echo pwd()  
-  gradle -q helloWorld
+  gradle "-q helloWorld"
   echo "Finished"
   }
+}
+
+def gradle(args) {
+    sh "gradle ${args}"
 }
