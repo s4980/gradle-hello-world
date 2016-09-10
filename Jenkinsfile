@@ -4,4 +4,5 @@ node('gradle-agent') {
   checkout scm
   echo "Building projec using Gradle"
   gradle helloWorld
+  echo "Finished"
 }
